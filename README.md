@@ -4,4 +4,4 @@
 
 /start - старт. 
 
-![1](1.png)
+![](images/1.png)
