@@ -9,8 +9,6 @@ from aiogram.types import Message
 from aiogram.dispatcher import FSMContext
 from aiogram.dispatcher.filters import Text
 from aiogram.dispatcher.filters.state import State, StatesGroup
-import concurrent.futures
-from functools import partial
 
 from config import BOT_TOKEN
 from io import BytesIO
@@ -66,7 +64,7 @@ async def start(message: types.Message):
 
 @dp.message_handler(state=process.model)
 async def model(message: types.Message, state: FSMContext):
-    #await process.next()
+    # await process.next()
     await state.update_data(requested_model=message.text)
     async with state.proxy() as data:
         if data['requested_model'] == "gan":
@@ -82,7 +80,7 @@ async def content(message: types.Message, state: FSMContext):
     file_id = message.photo[-1].file_id
     file_info = await bot.get_file(file_id)
     image_data = await bot.download_file(file_info.file_path)
-    content_image = Image.open(image_data)
+    content_image = image_data
     await state.update_data(content_image=content_image)
     await process.style.set()
     await message.reply('Супер, теперь гони стайл')
@@ -93,7 +91,7 @@ async def style(message: types.Message, state: FSMContext):
     file_id1 = message.photo[-1].file_id
     file_info1 = await bot.get_file(file_id1)
     image_data1 = await bot.download_file(file_info1.file_path)
-    style_image = Image.open(image_data1)
+    style_image = image_data1
     await state.update_data(style_image=style_image)
     await message.reply(text='ждемс...')
     async with state.proxy() as data:

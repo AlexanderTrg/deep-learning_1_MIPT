@@ -37,7 +37,6 @@ class ContentLoss(nn.Module):
 
     def forward(self, input):
         self.loss = F.mse_loss(input, self.target)
-        print('конент..')
         return input
 
 
