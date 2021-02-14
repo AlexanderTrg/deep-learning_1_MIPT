@@ -4,6 +4,8 @@
 
 /start - старт. 
 
+<img scr="https://github.com/Ololoput/deep-learning_1_MIPT/blob/master/images/1.PNG" width = "200" height = "200">
+
 ![](https://github.com/Ololoput/deep-learning_1_MIPT/blob/master/images/1.PNG)
 
 ![](https://github.com/Ololoput/deep-learning_1_MIPT/blob/master/images/2.PNG)
