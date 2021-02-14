@@ -4,4 +4,8 @@
 
 /start - старт. 
 
-![](images/1.png)
+![](https://github.com/Ololoput/deep-learning_1_MIPT/blob/master/images/1.PNG)
+
+![](https://github.com/Ololoput/deep-learning_1_MIPT/blob/master/images/2.PNG)
+
+![](https://github.com/Ololoput/deep-learning_1_MIPT/blob/master/images3.PNG)
